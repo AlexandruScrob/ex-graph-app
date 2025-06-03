@@ -1,5 +1,5 @@
 # Technical assessment
-NOTE: Steps are provided for Linux environment
+NOTE: Steps are provided for Linux
 
 <!--TOC-->
 

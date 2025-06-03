@@ -1,6 +1,6 @@
 from contextlib import asynccontextmanager
-from dotenv import load_dotenv
 
+from dotenv import load_dotenv
 from fastapi import FastAPI
 from fastapi.exceptions import RequestValidationError
 
@@ -10,9 +10,8 @@ from core.handlers import (
     catch_entity_not_found,
     catch_request_validation_exception,
 )
-from external.neo4j.exceptions import EntityNotFoundError
-
 from core.settings import get_settings
+from external.neo4j.exceptions import EntityNotFoundError
 from views.claim import router as claim_router
 from views.company import router as company_router
 from views.document import router as document_router
