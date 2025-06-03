@@ -28,9 +28,12 @@ settings = get_settings()
 ###
 @asynccontextmanager
 async def lifespan(app: FastAPI):
-    # from external.neo4j.operations import check_db_connection
-    # check_db_connection()
+    from external.neo4j.operations import check_db_connection
+
+    check_db_connection()
+
     # from external.neo4j.operations import clear_db
+
     # clear_db()
     yield
 

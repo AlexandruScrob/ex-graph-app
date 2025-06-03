@@ -12,6 +12,7 @@ NOTE: Steps are provided for Linux environment
 
 <!--TOC-->
 
+
 ## Setup Environment
 
 Source: https://docs.astral.sh/uv/
@@ -33,10 +34,12 @@ To Deactivate venv
 ## Run DB
 
 a. Install neo4j steps:
-    https://neo4j.com/docs/operations-manual/current/installation/linux/debian/
+Source:https://neo4j.com/docs/operations-manual/current/installation/linux/debian/
 b. Configurations ne4oj:
-    https://www.linode.com/docs/guides/installing-and-configuring-neo4j-on-ubuntu-2204/
-c. Start/Stop DB:
+Source: https://www.linode.com/docs/guides/installing-and-configuring-neo4j-on-ubuntu-2204/
+c. Install neo4j extension for VSCode:
+Source: https://neo4j.com/blog/developer/run-cypher-without-leaving-your-ide-with-neo4j-vscode-extension/
+d. Start/Stop DB:
     sudo service neo4j start
     sudo service neo4j stop
 

@@ -4,10 +4,13 @@ from tests.mocks.constants import TEST_PERSON_ID, TEST_DOCUMENT_ID, TEST_CLAIM_I
 
 
 class TestPerson:
+    def __init__(self, person_id: str | None = None) -> None:
+        self.person_id = person_id or TEST_PERSON_ID
+
     @property
     def __properties__(self) -> dict[str, Any]:
         return {
-            "pid": TEST_PERSON_ID,
+            "pid": self.person_id or TEST_PERSON_ID,
             "name": "Test Name",
             "role": "test_role",
             "email": "test_email",
@@ -21,10 +24,13 @@ class TestPerson:
 
 
 class TestCompany:
+    def __init__(self, company_id: str | None = None) -> None:
+        self.company_id = company_id or TEST_COMPANY_ID
+
     @property
     def __properties__(self) -> dict[str, Any]:
         return {
-            "pid": TEST_COMPANY_ID,
+            "pid": self.company_id or TEST_COMPANY_ID,
             "name": "Test company",
             "type": "Insurance",
             "registration_number": "23454",
@@ -44,7 +50,7 @@ class TestClaim:
     @property
     def __properties__(self) -> dict[str, Any]:
         return {
-            "pid": TEST_CLAIM_ID,
+            "pid": self.claim_id or TEST_CLAIM_ID,
             "claim_number": "#12345",
             "amount": 1000.0,
             "status": "Submitted",
@@ -59,10 +65,13 @@ class TestClaim:
 
 
 class TestDocument:
+    def __init__(self, document_id: str | None = None) -> None:
+        self.document_id = document_id or TEST_DOCUMENT_ID
+
     @property
     def __properties__(self) -> dict[str, Any]:
         return {
-            "pid": TEST_DOCUMENT_ID,
+            "pid": self.document_id or TEST_DOCUMENT_ID,
             "doc_number": "DOC12345",
             "submission_date": "2025-05-27T16:02:08",
             "content_type": "content",
